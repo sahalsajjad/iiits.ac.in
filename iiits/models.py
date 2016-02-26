@@ -14,7 +14,7 @@ class ResearchArea(Model):
 	
 class Faculty(Model):
 	user = OneToOneField(User)
-	photo=ImageField()
+	photo=ImageField(upload_to='images/faculty/')
 	title = ForeignKey(FacultyTitle)
 	research_areas = CommaSeparatedIntegerField(max_length=150)#ResearchArea IDs
 	department = ForeignKey(Department)

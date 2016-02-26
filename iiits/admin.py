@@ -1,3 +1,4 @@
 from django.contrib import admin
+from iiits.models import *
 
-# Register your models here.
+admin.site.register(Faculty)
