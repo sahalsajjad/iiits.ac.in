@@ -41,5 +41,7 @@ class FacultyProfileView(TemplateView):
 		ifNone(vs,'true')
 		instfac = self.request.GET.get('instfac')
 		ifNone(instfac,'true')
-		
+		if(dept != 'all' 
+		InstFacultyListByDept = Faculty.objects.filter('department__code'=dept)
+		VisitingFacultyList = VisitingFaculty.filter()
 		return context		
