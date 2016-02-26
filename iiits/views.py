@@ -9,7 +9,7 @@ class HomeView(TemplateView):
 		
 		context = super(HomeView,self).get_context_data(**kwargs)
 		context = {
-			
+
 		}
 		
 		return context
@@ -18,6 +18,5 @@ class FacultyView(TemplateView):
 	template_name = 'iiits/faculty/faculty_home.html'
 	def get_context_data(self, **kwargs):
 		context = super(FacultyView,self).get_context_data(**kwargs)
-		context = {
-
-		}		
+		context = dict()
+		return context		
