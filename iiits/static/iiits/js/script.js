@@ -8,6 +8,7 @@ $(document).ready(function(){
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }	
+	
 	console.log(getParameterByName('dept'));
 	console.log(getParameterByName('title'));
 	console.log(getParameterByName('ra'));

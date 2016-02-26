@@ -14,13 +14,19 @@ class ResearchArea(Model):
 	
 class Faculty(Model):
 	user = OneToOneField(User)
-	photo=ImageField(upload_to='images/faculty/')
+	photo=ImageField(upload_to='iiits/static/iiits/images/faculty/')
 	title = ForeignKey(FacultyTitle)
 	research_areas = CommaSeparatedIntegerField(max_length=150)#ResearchArea IDs
 	department = ForeignKey(Department)
 	contact_no=TextField()
 	professional_edu=TextField()
 	website=TextField()
+
+class VisitingFaculty(Model):
+	user = OneToOneField(User)
+	photo = photo=ImageField(upload_to='iiits/static/iiits/images/faculty/')
+	institute = TextField()
+	courses= TextField()
 	
 class Publications(Model):
 	title= CharField(db_index=True,max_length=200)
