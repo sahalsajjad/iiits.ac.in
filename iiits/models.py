@@ -4,13 +4,13 @@ from django.db.models import *
 from django.contrib.auth.models import User
 class Department(Model):
 	name = CharField(max_length=100)
-	code = CharField(max_length=20)
+	code = CharField(db_index=True,max_length=20)
 class FacultyTitle(Model):
 	title = CharField(max_length=100)
-	code = CharField(max_length=20)
+	code = CharField(db_index=True,max_length=20)
 class ResearchArea(Model):
 	title = CharField(max_length=150)
-	code = CharField(max_length=50)
+	code = CharField(db_index=True,max_length=50)
 	
 class Faculty(Model):
 	user = OneToOneField(User)
@@ -23,12 +23,12 @@ class Faculty(Model):
 	website=TextField()
 	
 class Publications(Model):
-	title= CharField(max_length=200)
+	title= CharField(db_index=True,max_length=200)
 	description=TextField()
 	link=TextField()
 	fileupload = FileField()
-	year=CharField(max_length=4)	
-	starred=BooleanField(default=False)
+	year=CharField(db_index=True,max_length=4)	
+	starred=BooleanField(db_index=True,default=False)
 	
 
 '''
